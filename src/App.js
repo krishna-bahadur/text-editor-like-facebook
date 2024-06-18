@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import MyEditor from './Components/MyEditor';
 
 function App() {
+
+  const [editorContent, setEditorContent] = useState('');
+  const handleGetEditorContent = () =>{
+    console.log('Editor Content: ', editorContent)
+  } 
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Text Editor Like Facebook</h2>
+      <MyEditor onEditorContentChange={setEditorContent} />
+      <div className='get__editor__content__btn'>
+        <button onClick={handleGetEditorContent}>Get Editor Content In Console</button>
+      </div>
     </div>
   );
 }
