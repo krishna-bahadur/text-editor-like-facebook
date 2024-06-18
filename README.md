@@ -4,7 +4,7 @@ Draft.js is free to use. It is an open-source project maintained by Facebook and
 
 It can be useful if you want to store the formatted content as HTML in your database or render it directly in your application's UI.
 
-### Installation of used package in this project
+### Installation of used packages in this project
 
 1.  npm install draft-js react-draft-wysiwyg
 2.  npm install draft-js-export-html
